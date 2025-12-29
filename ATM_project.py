@@ -1,9 +1,16 @@
-class ATM:
+class login:
+    def __init__(self,pin,account_no):
+        self.id_no = ""
+        self.pin = pin
+        self.account_no = account_no
+
+
+class sign_up:
     def __init__(self):
         self.balance = 0
         self.pin = ""
         self.menu()
-
+          
     def menu(self):
         while True:
             print("""
@@ -60,3 +67,18 @@ class ATM:
         else:
             print("Wrong PIN")
 
+
+login_account = login()
+sign_up_account = sign_up()
+
+print("====== Well come to ATM System ======== ")
+user = int(input("""New account / press 1 
+                 Login account / press 2
+                 """))
+if user==1 :
+    sign_up_account()
+elif user==2:
+    login_account()
+
+else:
+    print("Wrong typing")
